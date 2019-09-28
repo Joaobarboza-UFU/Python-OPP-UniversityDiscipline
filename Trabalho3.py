@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Sat Sep 28 16:04:12 2019
@@ -25,12 +24,6 @@ class vetor3D(vetor2D):
         vetor2D.__init__(self, x, y)
         self.z = int(z)
         
-    def Create(self):
-        
-        self.x = int(input("Digite o valor de x:"))
-        self.y = int(input("Digite o valor de y:"))
-        self.z = int(input("Digite o valor de z:"))
-        return self
 
 #Getters
         
@@ -65,4 +58,16 @@ class vetor3D(vetor2D):
     def Module1(self):
         self.Module = math.sqrt( ((int(self.x))**2) + ((int(self.y))**2) + ((int(self.z))**2) )
         print (str(self.Module))
+        
+
+#Produto Vetorial
+        
+    def Produto(self,x,y):
+        self.x = (((vetor3D.get_y(x))*(vetor3D.get_z(y)))-((vetor3D.get_z(x))*(vetor3D.get_y(y))))
+        self.y = (((vetor3D.get_z(x))*(vetor3D.get_x(y)))-((vetor3D.get_x(x))*(vetor3D.get_z(y))))
+        self.z = (((vetor3D.get_x(x))*(vetor3D.get_y(y)))-((vetor3D.get_y(x))*(vetor3D.get_x(y))))
+        return self
+        
+    
+    
         
