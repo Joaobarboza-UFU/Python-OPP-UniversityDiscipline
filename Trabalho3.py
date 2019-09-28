@@ -21,8 +21,8 @@ class vetor2D(object):
     
 class vetor3D(vetor2D):
     
-    def __init__(self , z = 0, Module = 0):
-        
+    def __init__(self ,x = 0, y =0 , z = 0, Module = 0):
+        vetor2D.__init__(self, x, y)
         self.z = int(z)
         
     def Create(self):
@@ -35,19 +35,16 @@ class vetor3D(vetor2D):
 #Getters
         
     def get_x(self):
-        print(str(self.x))
         return self.x
    
     def get_y(self):
-        print(str(self.y))
         return self.y
     
     def get_z(self):
-        print(str(self.z))
         return self.z
     
     def get_module(self):
-        print(self.Module)
+        return self.Module
 
 #Setters
         
@@ -63,7 +60,7 @@ class vetor3D(vetor2D):
         self.z = z
         return self.z
     
-#Modulo
+#ModulO
     
     def Module1(self):
         self.Module = math.sqrt( ((int(self.x))**2) + ((int(self.y))**2) + ((int(self.z))**2) )
