@@ -20,15 +20,28 @@ class pilha(object):
         
     def remove(self):
         try:
-            self.pilha.pop()
-            print(self.pilha)
+            self.a = self.pilha.pop(0)
+            print(self.a)
         except IndexError:
             print("pilha vazia")
+            
+    def remove_final(self):
+        try:
+            self.a = self.pilha.pop(-1)
+            print(self.a)
+        except IndexError:
+            print("pilha vazia")
+            
+    def remove_element_x(self,x):
+        try:
+            self.a = self.pilha.pop(x - 1)
+            print(self.a)
+        except IndexError:
+            print("pilha vazia")
+        
             
     def imprimir(self):
         print (self.pilha)
         
-
-            
-
         
+pilha_1 = pilha()
